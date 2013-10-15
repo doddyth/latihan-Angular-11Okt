@@ -8,10 +8,10 @@ angular.module('myApp.controllers', []).
         return viewLocation === $location.path();
     };
   }])
-  .controller('MyCtrl1', ['$scope', function($scope) {
-	$scope.data = "ini halaman home";
+  .controller('MyCtrl1', ['$scope', 'Comic', function($scope, Comic) {
+	$scope.comics = Comic.query();
+	$scope.orderProp = "age";
   }])
   .controller('MyCtrl2', ['$scope', 'Comic', function($scope, Comic) {
 	$scope.comics = Comic.query();
-	$scope.orderProp = "age";
   }]);
