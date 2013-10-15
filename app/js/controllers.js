@@ -11,6 +11,7 @@ angular.module('myApp.controllers', []).
   .controller('MyCtrl1', ['$scope', function($scope) {
 	$scope.data = "ini halaman home";
   }])
-  .controller('MyCtrl2', [function() {
-
+  .controller('MyCtrl2', ['$scope', 'Comic', function($scope, Comic) {
+	$scope.comics = Comic.query();
+	$scope.orderProp = "age";
   }]);
