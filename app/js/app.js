@@ -10,5 +10,6 @@ angular.module('myApp', [
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/home', {templateUrl: 'partials/home.html', controller: 'MyCtrl1'});
   $routeProvider.when('/comic-list', {templateUrl: 'partials/comic-list.html', controller: 'MyCtrl2'});
+  $routeProvider.when('/comics/:comicId', {templateUrl: 'partials/comic-detail.html', controller: 'ComicDetailCtrl'});
   $routeProvider.otherwise({redirectTo: '/home'});
 }]);
