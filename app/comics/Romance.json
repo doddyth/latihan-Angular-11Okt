@@ -1,0 +1,33 @@
+{
+	"name": "Romance",
+	"comics": [
+	{
+		"age": 0,
+		"id": "1_3_romantica",
+		"imageUrl": "img/comics/1_3_Romantica.png",
+		"name": "1/3 Romantica",
+		"desc": "This is comic about romantic story"
+	},
+	{
+		"age": 1,
+		"id": "3_colors_signal",
+		"imageUrl": "img/comics/3 colors signal.png",
+		"name": "3 Colors Signal",
+		"desc": "This is comic about color signal story"
+	},
+	{
+		"age": 2,
+		"id": "3_star_love_days",
+		"imageUrl": "img/comics/3 star love days.png",
+		"name": "3 Star Love Days",
+		"desc": "This is comic about star love days story"
+	},
+	{
+		"age": 3,
+		"id": "24_colors",
+		"imageUrl": "img/comics/24colors.png",
+		"name": "24 Colors",
+		"desc": "This is comic about 24 colors story"
+	}]
+
+}

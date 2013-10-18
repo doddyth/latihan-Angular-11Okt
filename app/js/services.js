@@ -14,4 +14,11 @@ angular.module('myApp.services', ['ngResource']).
 			query: {method:'GET', params:{comicId:'comics'}, isArray:true}
 		});	
 	}
+  ]).
+  factory('Category', ['$resource', 
+	function($resource) {
+		return $resource('comics/:categoryId.json', {}, {
+			query: {method:'GET', params:{categoryId:'categories'}, isArray:true}
+		});
+	}
   ]);

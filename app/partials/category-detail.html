@@ -1,6 +1,6 @@
-<h2>Comic List</h2>
+<h2>{{title}} Manga</h2>
 <ul class="comics">
-	<li ng-repeat="comic in comics" class="thumbnail">
+	<li ng-repeat="comic in category.comics" class="thumbnail">
 		<a href="#/comics/{{comic.id}}" class="thumb"><img ng-src="{{comic.imageUrl}}"></img></a><br/>
 		<a href="#/comics/{{comic.id}}">{{comic.name}}</a>
 	</li>

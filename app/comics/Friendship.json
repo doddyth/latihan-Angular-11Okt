@@ -1,0 +1,19 @@
+{
+	"name": "Friendship",
+	"comics": [
+	{
+		"age": 5,
+		"id": "a_girls_melancoly",
+		"imageUrl": "img/comics/a girl's melancholy.png",
+		"name": "A Girl's Melancholy",
+		"desc": "This is comic about star love days story"
+	},
+	{
+		"age": 6,
+		"id": "a_stranger_in_kitsunegahara",
+		"imageUrl": "img/comics/a stranger in kitsunegahara.png",
+		"name": "A Stranger in Kitsunegahara",
+		"desc": "This is comic about star love days story"
+	}]
+
+}

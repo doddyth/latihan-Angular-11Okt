@@ -19,4 +19,12 @@ angular.module('myApp.controllers', []).
 	$scope.comic = Comic.get({comicId: $routeParams.comicId}, function(comic) {
 		$scope.image = comic.image;
 	});
+  }])
+  .controller('CategoryCtrl', ['$scope', 'Category', function($scope, Category) {
+	$scope.categories = Category.query();
+  }])
+  .controller('CategoryDetailCtrl', ['$scope', '$routeParams', 'Category', function($scope, $routeParams, Category) {
+	$scope.category = Category.get({categoryId: $routeParams.categoryId}, function(category) {
+		$scope.title = category.name;
+	});
   }]);

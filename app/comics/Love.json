@@ -1,0 +1,32 @@
+{
+	"name": "Love",
+	"comics": [
+	{
+		"age": 4,
+		"id": "37_oc_boyfriend",
+		"imageUrl": "img/comics/37 oc boyfriend.png",
+		"name": "37 OC Boyfriend",
+		"desc": "This is comic about boyfriend story"
+	},
+	{
+		"age": 7,
+		"id": "anemone_flower_shop",
+		"imageUrl": "img/comics/anemone flower shop.png",
+		"name": "Anemone Flower Shop",
+		"desc": "This is comic about star love days story"
+	},
+	{
+		"age": 8,
+		"id": "angel_duster",
+		"imageUrl": "img/comics/angel duster.png",
+		"name": "Angel Duster",
+		"desc": "This is comic about star love days story"
+	},
+	{
+		"age": 9,
+		"id": "august_december",
+		"imageUrl": "img/comics/August December.png",
+		"name": "August December",
+		"desc": "This is comic about star love days story"
+	}]
+}

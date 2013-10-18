@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" ng-app="myApp">
 <head>
   <title>Latihan Angular App</title
@@ -18,19 +18,14 @@
 </head>
 <body>
 <div id="wrapper">
-<div class="container-fluid">
-	<div class="jumbotron">
-		<h1>Best Comic Updates</h1>
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-		<a class="btn btn-primary btn-lg">Join Now!</a>
-	</div>
-</div>
+
 <div class="container">	
 	<nav class="navbar-wrapper navbar-default navbar-fixed-top" role="navigation" ng-controller="NavBarCtrl">
 		<div class="container">
           <div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
               <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
@@ -44,8 +39,26 @@
 		  </div>
         </div>
 	</nav>
-  <div class="container-fluid" ng-view></div>
-
+	<div class="container-fluid">
+		<div class="jumbotron">
+			<h1>Best Comic Updates</h1>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+			<a class="btn btn-primary btn-lg">Join Now!</a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="container-fluid col-md-9" ng-view></div>
+		<nav role="navigation" ng-controller="CategoryCtrl">
+			<div class="span3 col-md-3 navbar navbar-right">
+				<div class="widgetHeader navbar-header"><h3>Browse Comic by Category</h3></div>
+				<div class="widgetBody">
+					<ul class="nav ">
+						<li ng-repeat="category in categories" style="display: block"><a href="#/categories/{{category.name}}">{{category.name}}</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
 </div>
   
 <div id="footer">Latihan Angular App: v<span app-version></span></div>
