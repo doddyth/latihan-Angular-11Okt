@@ -9,37 +9,67 @@ describe('my app', function() {
   });
 
 
-  it('should automatically redirect to /view1 when location hash/fragment is empty', function() {
-    expect(browser().location().url()).toBe("/view1");
+  it('should automatically redirect to /home when location hash/fragment is empty', function() {
+    expect(browser().location().url()).toBe("/home");
+  });
+
+  describe('Nav list view', function() {
+	beforeEach(function() {
+		browser().navigateTo('#/home');
+    });
+	
+	it('should set isActive true', function() {
+		element('.navbar-nav li:eq(1) a').click();
+		expect(element('.navbar-nav li:eq(1)').attr('class')).toBe('active');
+    });
+	
+  });
+
+  describe('Home view', function() {
+
+    beforeEach(function() {
+		browser().navigateTo('#/home');
+    });
+
+    it('should display new update comic list', function() {
+		expect(repeater('.comics li').count()).toBe(5);
+    });
+
+	it('should display categories', function() {
+		expect(repeater('.widgetBody .nav li').count()).toBe(3);
+    });
   });
 
 
-  describe('view1', function() {
+  describe('Comic list view', function() {
 
     beforeEach(function() {
-      browser().navigateTo('#/view1');
+      browser().navigateTo('#/comic-list');
     });
 
-
-    it('should render view1 when user navigates to /view1', function() {
-      expect(element('[ng-view] p:first').text()).
-        toMatch(/partial for view 1/);
+	it('should display all comic list', function() {
+		expect(repeater('.comics li').count()).toBe(10);
     });
-
+	
   });
-
-
-  describe('view2', function() {
-
-    beforeEach(function() {
-      browser().navigateTo('#/view2');
-    });
-
-
-    it('should render view2 when user navigates to /view2', function() {
-      expect(element('[ng-view] p:first').text()).
-        toMatch(/partial for view 2/);
-    });
-
+  
+  describe('Category manga view', function() {
+	beforeEach(function() {
+		browser().navigateTo('#/categories/Romance');
+	});
+	
+	it('should display all romance manga', function(){
+		expect(repeater('.comics li').count()).toBe(4);
+	});
+  });
+  
+  describe('Category clicked', function() {
+  beforeEach(function() {
+		browser().navigateTo('#/home');
+	});
+	it('should display romance view', function(){
+		element('.widgetBody .nav li:eq(0) a').click();
+		expect(browser().location().url()).toBe('/categories/Romance');
+	});
   });
 });
