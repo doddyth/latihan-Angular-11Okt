@@ -49,6 +49,7 @@ describe('my app', function() {
 
 	it('should display all comic list', function() {
 		expect(repeater('.comics li').count()).toBe(10);
+		
     });
 	
   });
